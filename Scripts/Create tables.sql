@@ -1,0 +1,88 @@
+﻿--DROP TABLE dbo.OrderHeader;
+--DROP TABLE dbo.OrderLine;
+--DROP TABLE dbo.[Order];
+--DROP TABLE dbo.OrderData;
+--DROP TABLE dbo.OrderFormat;
+--DROP TABLE dbo.Branch;
+--DROP TABLE dbo.Client;
+--DROP TABLE dbo.DataType;
+--DROP TABLE dbo.Product;
+--DROP TABLE dbo.Source;
+--DROP TABLE dbo.Unit;
+--DROP SEQUENCE dbo.s_orderId;
+
+CREATE SEQUENCE dbo.s_orderId
+AS INT
+START WITH 1
+NO CYCLE
+CACHE
+GO;
+
+
+CREATE TABLE eastWest_DB.dbo.Branch (
+  BranchId INT IDENTITY PRIMARY KEY
+ ,Name NVARCHAR(100) NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.Client (
+  ClientId INT IDENTITY PRIMARY KEY
+ ,Name NVARCHAR(100) NOT NULL
+ ,BranchId INT NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.Product (
+  ProductId INT IDENTITY PRIMARY KEY
+ ,Name NVARCHAR(100) NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.Source (
+  SourceId INT IDENTITY PRIMARY KEY
+ ,Name NVARCHAR(100) NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.Unit (
+  UnitId INT IDENTITY PRIMARY KEY
+ ,ShortName NVARCHAR(100) NOT NULL
+ ,FullName NVARCHAR(100) NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.DataType (
+  DataTypeId INT IDENTITY PRIMARY KEY
+ ,Name NVARCHAR(100) NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.[Order] (
+  OrderId INT NOT NULL PRIMARY KEY DEFAULT(NEXT VALUE FOR dbo.s_orderId)
+ ,SourceId INT NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.OrderData (
+  OrderId INT NOT NULL PRIMARY KEY
+ ,DataTypeId INT NOT NULL
+ ,FilePath NVARCHAR(260) NULL
+ ,XmlData XML NULL 
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.OrderHeader (
+  OrderId INT NOT NULL PRIMARY KEY
+ ,ClientId INT NOT NULL
+ ,DeliveryDate DATE NOT NULL
+ ,PickupTime TIME NOT NULL
+) ON [PRIMARY]
+GO;
+
+CREATE TABLE eastWest_DB.dbo.OrderLine (
+  OrderId INT NOT NULL PRIMARY KEY
+ ,ProductId INT NOT NULL
+ ,UnitId INT NOT NULL
+ ,Amount NUMERIC(18, 3) NOT NULL
+) ON [PRIMARY]
+GO;
