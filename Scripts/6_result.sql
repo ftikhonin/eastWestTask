@@ -30,7 +30,7 @@ CREATE TABLE #ordersMsk(
  ,weekDayNum INT NOT NULL
 );
 
---тдни недели, на которые приходится самая большая нагрузка
+--дни недели, на которые приходится самая большая нагрузка
 DECLARE @weekDays TABLE (
   weekDayNum INT NOT NULL PRIMARY KEY
 );

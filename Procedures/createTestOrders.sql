@@ -4,6 +4,7 @@
  * @param dayOfWeek IN INT - День недели, на который создавать заказ(1-пн, 2-вт и тд)
  * @param cnt IN INT - количество заказов
  * @param year IN INT - год, в котором создать заказы
+ *
  * @author Тихонин Ф.И. <f.tihonin@energos.perm.ru>
  */
 ALTER PROCEDURE dbo.createTestOrders
