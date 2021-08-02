@@ -1,4 +1,4 @@
-﻿DECLARE @on_date INT = 2020;
+DECLARE @on_date INT = 2020;
 DECLARE @on_time TIME = '17:00'
 
 DECLARE @branchName NVARCHAR(100) = 'МОСКВА';

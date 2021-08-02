@@ -1,4 +1,4 @@
-﻿CREATE DATABASE eastWest_DB
+CREATE DATABASE eastWest_DB
 ON PRIMARY (
 NAME = N'eastWest_DB',
 FILENAME = N'C:\Users\Fedor\eastWest_DB.mdf',

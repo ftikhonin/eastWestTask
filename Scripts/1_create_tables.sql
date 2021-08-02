@@ -1,4 +1,4 @@
-﻿--DROP TABLE dbo.OrderHeader;
+--DROP TABLE dbo.OrderHeader;
 --DROP TABLE dbo.OrderLine;
 --DROP TABLE dbo.[Order];
 --DROP TABLE dbo.OrderData;

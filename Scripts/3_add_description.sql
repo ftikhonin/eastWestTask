@@ -1,4 +1,4 @@
-﻿
+
 EXEC sys.sp_addextendedproperty N'MS_Description'
                                ,'Филиалы компании'
                                ,'SCHEMA'

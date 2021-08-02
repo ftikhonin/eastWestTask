@@ -1,4 +1,4 @@
-﻿INSERT INTO dbo.Source (Name)
+INSERT INTO dbo.Source (Name)
   VALUES (N'email');
 INSERT INTO dbo.Source (Name)
   VALUES (N'FTP');
