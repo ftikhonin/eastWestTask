@@ -162,7 +162,7 @@ CROSS APPLY (
       ) ao
 ) av;
 
-SELECT DATENAME(WEEKDAY, weekDayNum - 1)
+SELECT DATENAME(WEEKDAY, weekDayNum - 1) [День недели]
       ,average [Среднее кол-во заказов в ДН Филиал]
       ,averageEvening [Среднее кол-во вечерних заказов в ДН Филиал]
       ,averageDay [Среднее кол-во заказов в ДН Компания]
