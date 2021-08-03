@@ -3,6 +3,7 @@
 
 Используемая версия SQL SERVER: Microsoft SQL Server 2016 (SP1)
 
+Схема таблиц в файле Scheme.dbd
 
 Порядок запуска скриптов:
 
