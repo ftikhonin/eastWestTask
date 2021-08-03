@@ -7,7 +7,7 @@
 
 Порядок запуска скриптов:
 
-1.   Scripts\1_create_tables.sql
+1.   Scripts\0_create_db.sql
 
 2.   Scripts\1_create_tables.sql
 
