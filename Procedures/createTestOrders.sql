@@ -1,5 +1,5 @@
 /**
- * Procedure for creating random clients
+ * Procedure for creating random clients and orders
  *	
  * @param dayOfWeek IN INT - День недели, на который создавать заказ(1-пн, 2-вт и тд)
  * @param cnt IN INT - количество заказов
