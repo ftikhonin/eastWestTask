@@ -1,11 +1,11 @@
 /**
- * Процедура, рандомно создаёт клиентов, тестовые заказы в рандомные дни в выбранном году по выбранному дню недели
+ * Procedure for creating random clients
  *	
  * @param dayOfWeek IN INT - День недели, на который создавать заказ(1-пн, 2-вт и тд)
  * @param cnt IN INT - количество заказов
  * @param year IN INT - год, в котором создать заказы
  *
- * @author Тихонин Ф.И. <ftikhonin@yandex.ru>
+ * @author Tikhonin Fedor <ftikhonin@yandex.ru>
  */
 ALTER PROCEDURE dbo.createTestOrders
 (
