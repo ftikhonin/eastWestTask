@@ -5,7 +5,7 @@
  * @param cnt IN INT - количество заказов
  * @param year IN INT - год, в котором создать заказы
  *
- * @author Тихонин Ф.И. <f.tihonin@energos.perm.ru>
+ * @author Тихонин Ф.И. <ftikhonin@yandex.ru>
  */
 ALTER PROCEDURE dbo.createTestOrders
 (
